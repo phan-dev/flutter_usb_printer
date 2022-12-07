@@ -96,9 +96,9 @@ class _MyAppState extends State<MyApp> {
               },
               leading: new Icon(Icons.usb),
               title: new Text(
-                  device['manufacturer'] + " " + device['productName']),
+                  (device['manufacturer'] ?? " ") + (device['productName']  ?? " ")),
               subtitle:
-                  new Text(device['vendorId'] + " " + device['productId']),
+                  new Text((device['vendorId'] ?? " ") + (device['productId'] ?? " ")),
             ))
         .toList();
   }
